@@ -3,9 +3,9 @@ class SubmissionsController < ApplicationController
     @submissions = Submission.all.order("vote_count desc")
   end
 
-  def detail
-    @submission = Submission.find params[:id]
-  end
+  # def detail
+  #   @submission = Submission.find params[:id]
+  # end
 
   def uproger
     @submission = Submission.find params[:id]

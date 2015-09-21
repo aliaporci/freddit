@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'submissions/new' => 'submissions#new', as: :new_submission
 
-  get 'submissions/:id' => 'submissions#detail', as: :submission
+  # get 'submissions/:id' => 'submissions#detail', as: :submission
 
   post 'submissions' => 'submissions#create'
 
