@@ -1,2 +1,5 @@
 <h1>Submissions#list</h1>
-<p>Find me in app/views/submissions/list.html.erb</p>
+
+<% @submissions.each do |submission| %>
+  <%= link_to submission.title, submission.url %>
+<% end %>
