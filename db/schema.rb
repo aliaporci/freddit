@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150921042752) do
   create_table "submissions", force: :cascade do |t|
     t.string   "url",                    null: false
     t.string   "title",                  null: false
-    t.integer  "view_count", default: 0
+    t.integer  "vote_count", default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

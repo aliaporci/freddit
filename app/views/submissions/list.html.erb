@@ -1,9 +1,22 @@
-<h1>Submissions#list</h1>
-
 <ol>
   <% @submissions.each do |submission| %>
-    <li>
-      <%= link_to submission.title, submission.url %>
+    <li class="submission-box">
+      <!-- <div class="submission-box"> -->
+        <div class="vote-box">
+          <%= link_to uproger_submission_path(id: submission.id), method: :post do %>
+            <%= image_tag 'uproger.jpg' %>
+          <% end %>
+          <p>
+            <%= submission.vote_count %>
+          </p>
+          <%= link_to downroger_submission_path(id: submission.id), method: :post do %>
+            <%= image_tag 'downroger.jpg' %>
+          <% end %>
+        </div>
+        <div class="submission-link">
+          <%= link_to submission.title, submission.url %>
+        </div>
+      <!-- </div> -->
     </li>
   <% end %>
 </ol>

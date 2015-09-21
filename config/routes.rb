@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   get 'submissions/:id' => 'submissions#detail', as: :submission
 
+  post 'submissions/:id/uproger' => 'submissions#uproger', as: :uproger_submission
+
+  post 'submissions/:id/downroger' => 'submissions#downroger', as: :downroger_submission
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

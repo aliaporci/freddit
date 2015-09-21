@@ -3,7 +3,7 @@ class CreateSubmissions < ActiveRecord::Migration
     create_table :submissions do |t|
       t.string :url, unique: true, null: false
       t.string :title, unique: true, null: false
-      t.integer :view_count, default: 0
+      t.integer :vote_count, default: 0
 
       t.timestamps null: false
     end

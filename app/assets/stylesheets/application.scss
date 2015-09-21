@@ -23,3 +23,40 @@ h1 {
     height: 100%;
   }
 }
+
+// li {
+//   height: 3em;
+//   margin-bottom: 1em;
+  .submission-box {
+    vertical-align: middle;
+    height: 4em;
+    width: 480px;
+    display: inline;
+    .vote-box {
+      height: 3em;
+      margin-right: 1em;
+      margin-bottom: 28px;
+      display: block;
+      width: 1em;
+      float: left;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        height: 1em;
+      }
+    }
+    .submission-link {
+      // float: right;
+      padding-top: 1em;
+      padding-bottom: 28px;
+      // height: 3em;
+      font-size: 18px;
+      text-align: left;
+      margin-bottom: 18px;
+      border-bottom: dotted 2px gray;
+      width: 50%;
+    }
+  }
+// }
