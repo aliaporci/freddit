@@ -8,8 +8,10 @@
 </head>
 <body>
   <h1>
+    <%= link_to root_path, class: 'link-home' do%>
     <%= image_tag 'header-fred.jpg' %>
     freddit
+    <% end %>
   </h1>
 
 <%= yield %>
