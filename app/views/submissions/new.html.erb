@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h1>Submit Your Fred Link!!!</h1>
+
+  <%= form_for @submission do |s| %>
+
+    <div class="form-group <%= 'has error' if (@submission.errors[:url].any? || @submission.errors[:title].any?) %>">
+      <%= s.label :title, class: 'control-label' %>
+      <%= s.text_field :title, class: 'form-control' %>
+      <p class="help-block"><%= @submission.errors[:title].join(", ") %></p>
+      <%= s.label :url, class: 'control-label' %>
+      <%= s.url_field :url, class: 'form-control' %>
+      <p class="help-block"><%= @submission.errors[:url].join(", ") %></p>
+    </div>
+
+    <!-- <div>
+      <%= s.label :url %>
+      <%= s.url_field :url %>
+    </div> -->
+
+    <div class="form-group">
+      <%= s.submit class: 'btn btn-default btn-lg' %>
+    </div>
+
+  <% end %>
+
+</div>

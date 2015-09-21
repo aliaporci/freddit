@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root 'submissions#list'
 
+  get 'submissions/new' => 'submissions#new', as: :new_submission
+
   get 'submissions/:id' => 'submissions#detail', as: :submission
+
+  post 'submissions' => 'submissions#create'
 
   post 'submissions/:id/uproger' => 'submissions#uproger', as: :uproger_submission
 
